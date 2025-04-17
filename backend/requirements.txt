@@ -8,6 +8,8 @@ pandas==2.2.3
 numpy==2.2.4
 matplotlib==3.10.1
 gunicorn==21.2.0  # Required by Render to serve your Flask app
+flask_cors
+
 
 # Optional if you're using notebooks for model evaluation
 ipykernel==6.29.5
