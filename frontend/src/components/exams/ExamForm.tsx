@@ -53,7 +53,9 @@ const ExamForm = ({ onSubmit, onCancel }: ExamFormProps) => {
     if (syllabus) formData.append('syllabus', syllabus);
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/generate-plan', {
+      const API_URL = import.meta.env.VITE_API_URL;  // Use the environment variable here
+
+      const response = await fetch(`${API_URL}/generate-plan`, {
         method: 'POST',
         body: formData,
       });
